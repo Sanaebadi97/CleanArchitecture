@@ -30,9 +30,9 @@
 
 package com.raywenderlich.android.majesticreader.presentation
 
-import com.raywenderlich.android.majesticreader.Document
+import com.raywenderlich.android.majesticreader.domain.Document
 
 interface MainActivityDelegate {
 
-  fun openDocument(document: Document)
+  fun openDocument(document: com.raywenderlich.android.majesticreader.domain.Document)
 }

@@ -34,14 +34,13 @@ import android.app.Application
 import android.graphics.pdf.PdfRenderer
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.core.os.bundleOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.raywenderlich.android.majesticreader.Bookmark
-import com.raywenderlich.android.majesticreader.Document
+import com.raywenderlich.android.majesticreader.domain.Bookmark
+import com.raywenderlich.android.majesticreader.domain.Document
 import com.raywenderlich.android.majesticreader.framework.Interactors
 import com.raywenderlich.android.majesticreader.framework.MajesticViewModel
 import java.io.IOException
@@ -52,14 +51,14 @@ class ReaderViewModel(application: Application, interactors: Interactors) : Maje
   companion object {
     private const val DOCUMENT_ARG = "document"
 
-    fun createArguments(document: Document) = bundleOf(
+    fun createArguments(document: com.raywenderlich.android.majesticreader.domain.Document) = bundleOf(
         DOCUMENT_ARG to document
     )
   }
 
-  val document = MutableLiveData<Document>()
+  val document = MutableLiveData<com.raywenderlich.android.majesticreader.domain.Document>()
 
-  val bookmarks = MediatorLiveData<List<Bookmark>>().apply {
+  val bookmarks = MediatorLiveData<List<com.raywenderlich.android.majesticreader.domain.Bookmark>>().apply {
     // TODO add sources
   }
 
@@ -100,7 +99,7 @@ class ReaderViewModel(application: Application, interactors: Interactors) : Maje
       bookmarks.value?.any { it.page == currentPage.value?.index } == true
 
   // TODO check if document is in library
-  private fun isInLibrary(document: Document) = false
+  private fun isInLibrary(document: com.raywenderlich.android.majesticreader.domain.Document) = false
 
   fun loadArguments(arguments: Bundle?) {
     if (arguments == null) {
@@ -114,7 +113,7 @@ class ReaderViewModel(application: Application, interactors: Interactors) : Maje
     // TODO open document
   }
 
-  fun openBookmark(bookmark: Bookmark) {
+  fun openBookmark(bookmark: com.raywenderlich.android.majesticreader.domain.Bookmark) {
     openPage(bookmark.page)
   }
 

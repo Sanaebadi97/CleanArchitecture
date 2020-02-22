@@ -42,7 +42,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.raywenderlich.android.majesticreader.R
-import com.raywenderlich.android.majesticreader.Document
+import com.raywenderlich.android.majesticreader.domain.Document
 import com.raywenderlich.android.majesticreader.framework.MajesticViewModelFactory
 import com.raywenderlich.android.majesticreader.presentation.IntentUtil
 import com.raywenderlich.android.majesticreader.presentation.library.LibraryFragment
@@ -52,7 +52,7 @@ class ReaderFragment : Fragment() {
 
   companion object {
 
-    fun newInstance(document: Document) = ReaderFragment().apply {
+    fun newInstance(document: com.raywenderlich.android.majesticreader.domain.Document) = ReaderFragment().apply {
       arguments = ReaderViewModel.createArguments(document)
     }
   }
@@ -75,7 +75,7 @@ class ReaderFragment : Fragment() {
         .get(ReaderViewModel::class.java)
 
     viewModel.document.observe(this, Observer {
-      if (it == Document.EMPTY) {
+      if (it == com.raywenderlich.android.majesticreader.domain.Document.EMPTY) {
         // Show file picker action.
         startActivityForResult(IntentUtil.createOpenIntent(), LibraryFragment.READ_REQUEST_CODE)
       }

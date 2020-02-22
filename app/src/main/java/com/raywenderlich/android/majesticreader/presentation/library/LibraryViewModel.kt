@@ -33,14 +33,14 @@ package com.raywenderlich.android.majesticreader.presentation.library
 import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.MutableLiveData
-import com.raywenderlich.android.majesticreader.Document
+import com.raywenderlich.android.majesticreader.domain.Document
 import com.raywenderlich.android.majesticreader.framework.Interactors
 import com.raywenderlich.android.majesticreader.framework.MajesticViewModel
 
 class LibraryViewModel(application: Application, interactors: Interactors)
   : MajesticViewModel(application, interactors) {
 
-  val documents: MutableLiveData<List<Document>> = MutableLiveData()
+  val documents: MutableLiveData<List<com.raywenderlich.android.majesticreader.domain.Document>> = MutableLiveData()
 
   fun loadDocuments() {
     // TODO start loading documents
@@ -51,7 +51,7 @@ class LibraryViewModel(application: Application, interactors: Interactors)
     loadDocuments()
   }
 
-  fun setOpenDocument(document: Document) {
+  fun setOpenDocument(document: com.raywenderlich.android.majesticreader.domain.Document) {
     // TODO set currently open document
   }
 }

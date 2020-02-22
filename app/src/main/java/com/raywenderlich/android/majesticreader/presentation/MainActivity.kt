@@ -38,7 +38,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.raywenderlich.android.majesticreader.Document
+import com.raywenderlich.android.majesticreader.domain.Document
 import com.raywenderlich.android.majesticreader.R
 import com.raywenderlich.android.majesticreader.presentation.library.LibraryFragment
 import com.raywenderlich.android.majesticreader.presentation.reader.ReaderFragment
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
           .replace(R.id.content, LibraryFragment.newInstance())
           .commit()
       R.id.nav_reader -> openDocument(
-          Document.EMPTY)
+          com.raywenderlich.android.majesticreader.domain.Document.EMPTY)
     }
     val drawerLayout: DrawerLayout = findViewById(
         R.id.drawer_layout)
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     return true
   }
 
-  override fun openDocument(document: Document) {
+  override fun openDocument(document: com.raywenderlich.android.majesticreader.domain.Document) {
     nav_view.menu.findItem(R.id.nav_reader).isChecked = true
     supportFragmentManager.beginTransaction()
         .replace(R.id.content, ReaderFragment.newInstance(document))
