@@ -47,7 +47,7 @@ Along with the Clean Architecture approach, the following Android architecture c
 
 **Room** ‒ Provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite
 
-ViewModel ‒ Designed to store and manage UI-related data in a life cycle-conscious way
+**ViewModel** ‒ Designed to store and manage UI-related data in a life cycle-conscious way
 
 LiveData ‒ An observable data holder class that, unlike a regular observable, is life cycle-aware, meaning it respects the lifecycle of other app components such as activities, fragments, and services
 
