@@ -33,7 +33,7 @@ package com.raywenderlich.android.majesticreader.framework
 import android.app.Application
 import com.raywenderlich.android.majesticreader.data.BookmarkRepository
 import com.raywenderlich.android.majesticreader.data.DocumentRepository
-import com.raywenderlich.android.majesticreader.interactors.AddBookmark
+import com.raywenderlich.android.majesticreader.interactors.*
 
 class MajesticReaderApplication : Application() {
 
