@@ -2,16 +2,16 @@
 
 Here’s a brief definition of some terms from the images above to help you get more familiar with this approach:
 
-Entities are enterprise-wide business rules that encapsulate the most general business rules and also contain Data Transfer Objects (DTOs). When something external changes, these rules are the least likely to change.
+**Entities** are enterprise-wide business rules that encapsulate the most general business rules and also contain Data Transfer Objects (DTOs). When something external changes, these rules are the least likely to change.
 
 
-Use cases are also called interactors and stand for application-specific business rules of the software. This layer is isolated from changes to the database, common frameworks, and the UI.
+**Use cases** are also called interactors and stand for application-specific business rules of the software. This layer is isolated from changes to the database, common frameworks, and the UI.
 
 
-Interface adapters convert data from a convenient format for entities and use cases to a format applicable to databases and the web, for example. This layer includes Presenters from MVP, ViewModel from MVVM, and Gateways (also known as Repositories).
+**Interface adapters** convert data from a convenient format for entities and use cases to a format applicable to databases and the web, for example. This layer includes Presenters from MVP, ViewModel from MVVM, and Gateways (also known as Repositories).
 
 
-Frameworks and drivers are the outermost layer, which consists of the web framework, database, UI, HTTP client, and so on.
+**Frameworks and drivers** are the outermost layer, which consists of the web framework, database, UI, HTTP client, and so on.
 
 
 
