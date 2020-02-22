@@ -41,3 +41,14 @@ As you can see in the image, an Android application with Clean Architecture gath
 programs using observable sequences for the JVM
 
 **Retrofit 2** ‒ A type-safe HTTP client for Android and Java
+
+--
+Along with the Clean Architecture approach, the following Android architecture components will also be used in the application:
+
+Room ‒ Provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite
+
+ViewModel ‒ Designed to store and manage UI-related data in a life cycle-conscious way
+
+LiveData ‒ An observable data holder class that, unlike a regular observable, is life cycle-aware, meaning it respects the lifecycle of other app components such as activities, fragments, and services
+
+Paging Library ‒ Makes it easier for you to load data gradually and gracefully within your app’s RecyclerView
