@@ -24,5 +24,6 @@ Here’s a brief definition of some terms from the images above to help you get 
 As you can see in the image, an Android application with Clean Architecture gathers the layers into three modules:
 
 **Presentation**, which includes the UI, Presenter, and ViewModels
+
 Domain, which includes Entities and Interactors
 Data, which includes Databases and Rest clients
