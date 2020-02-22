@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f1cc18d-8227-47f6-be82-deb650ee1f7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/FileUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/FileUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/RoomDocumentDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/RoomDocumentDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/presentation/library/LibraryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/presentation/library/LibraryViewModel.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,11 +38,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/RoomDocumentDataSource.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="63" lean-forward="true" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+              <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/Interactors.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/MajesticReaderApplication.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/presentation/library/LibraryViewModel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="43" column="22" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -107,6 +133,9 @@
         <option value="$PROJECT_DIR$/core/src/main/java/com/raywenderlich/android/majesticreader/domain/DocumentDataSource.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/FileUtil.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/RoomDocumentDataSource.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/Interactors.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/MajesticReaderApplication.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/presentation/library/LibraryViewModel.kt" />
       </list>
     </option>
   </component>
@@ -186,6 +215,27 @@
               <item name="android" type="462c0819:PsiDirectoryNode" />
               <item name="majesticreader" type="462c0819:PsiDirectoryNode" />
               <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="raywenderlich" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="majesticreader" type="462c0819:PsiDirectoryNode" />
+              <item name="presentation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="starter" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="raywenderlich" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="majesticreader" type="462c0819:PsiDirectoryNode" />
+              <item name="presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="starter" type="1abcf292:AndroidViewProjectNode" />
@@ -477,12 +527,25 @@
       <option name="project" value="LOCAL" />
       <updated>1582357942909</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added RoomDocumentDataSource class and override methods ...">
+      <created>1582359408835</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582359408835</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added some codes to Application class">
+      <created>1582362246325</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582362246325</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="29" width="1368" height="742" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" visible="true" weight="0.32980332" />
       <window_info id="Structure" side_tool="true" />
@@ -524,7 +587,9 @@
     <MESSAGE value="added InMemoryOpenDocumentDataSource class and implement open document methods" />
     <MESSAGE value="added RoomBookmarkDataSource class and implement BookmarkDataSource" />
     <MESSAGE value="added DocumentDataSource interface with add , readAll and remove methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="added DocumentDataSource interface with add , readAll and remove methods" />
+    <MESSAGE value="added RoomDocumentDataSource class and override methods ..." />
+    <MESSAGE value="added some codes to Application class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some codes to Application class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -653,7 +718,28 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/RoomDocumentDataSource.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="63" lean-forward="true" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/Interactors.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/framework/MajesticReaderApplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raywenderlich/android/majesticreader/presentation/library/LibraryViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>

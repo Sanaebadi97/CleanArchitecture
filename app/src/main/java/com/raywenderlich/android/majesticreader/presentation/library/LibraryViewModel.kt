@@ -36,26 +36,33 @@ import androidx.lifecycle.MutableLiveData
 import com.raywenderlich.android.majesticreader.domain.Document
 import com.raywenderlich.android.majesticreader.framework.Interactors
 import com.raywenderlich.android.majesticreader.framework.MajesticViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class LibraryViewModel(application: Application, interactors: Interactors)
-  : MajesticViewModel(application, interactors) {
+    : MajesticViewModel(application, interactors) {
 
-  val documents: MutableLiveData<List<com.raywenderlich.android.majesticreader.domain.Document>> = MutableLiveData()
+    val documents: MutableLiveData<List<Document>> = MutableLiveData()
 
-  fun loadDocuments() {
-    GlobalScope.launch {
-      documents.postValue(interactors.getDocuments)
+    fun loadDocuments() {
+        GlobalScope.launch {
+            documents.postValue(interactors.getDocuments)
+        }
     }
-  }
 
-  fun addDocument(uri: Uri) {
-    // TODO add a new document
-    loadDocuments()
-  }
+    fun addDocument(uri: Uri) {
 
-  fun setOpenDocument(document: com.raywenderlich.android.majesticreader.domain.Document) {
-    // TODO set currently open document
-  }
+        GlobalScope.launch {
+            withContext(Dispatchers.IO) {
+                interactors.addDocument(Document(url = uri.toString(), name = "", size = 0, thumbnail = ""))
+            }
+        }
+        loadDocuments()
+    }
+
+    fun setOpenDocument(document: Document) {
+        interactors.setOpenDocument(document)
+    }
 }
