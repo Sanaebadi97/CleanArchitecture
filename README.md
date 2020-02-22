@@ -51,4 +51,4 @@ Along with the Clean Architecture approach, the following Android architecture c
 
 **LiveData** ‒ An observable data holder class that, unlike a regular observable, is life cycle-aware, meaning it respects the lifecycle of other app components such as activities, fragments, and services
 
-Paging Library ‒ Makes it easier for you to load data gradually and gracefully within your app’s RecyclerView
+**Paging Library** ‒ Makes it easier for you to load data gradually and gracefully within your app’s RecyclerView
