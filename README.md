@@ -35,9 +35,9 @@ As you can see in the image, an Android application with Clean Architecture gath
 
 **Kotlin** ‒ A statically typed programming language for modern multi-platform applications; Google rates Kotlin a first-class language for writing Android apps
 
-Dagger 2 ‒ A fully static, compile-time dependency injection framework for both Java and Android
+**Dagger 2** ‒ A fully static, compile-time dependency injection framework for both Java and Android
 
-RxJava 2 ‒ Reactive Extensions for the Java Virtual Machine (JVM) – a library for composing asynchronous and event-based 
+**RxJava 2** ‒ Reactive Extensions for the Java Virtual Machine (JVM) – a library for composing asynchronous and event-based 
 programs using observable sequences for the JVM
 
-Retrofit 2 ‒ A type-safe HTTP client for Android and Java
+**Retrofit 2** ‒ A type-safe HTTP client for Android and Java
