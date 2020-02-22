@@ -45,7 +45,7 @@ programs using observable sequences for the JVM
 --
 Along with the Clean Architecture approach, the following Android architecture components will also be used in the application:
 
-Room ‒ Provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite
+**Room** ‒ Provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite
 
 ViewModel ‒ Designed to store and manage UI-related data in a life cycle-conscious way
 
