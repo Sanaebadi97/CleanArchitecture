@@ -1,0 +1,78 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.raywenderlich.android.majesticreader"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:5:3-27:17
+12        android:name="com.raywenderlich.android.majesticreader.framework.MajesticReaderApplication"
+12-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:9:7-58
+13        android:allowBackup="false"
+13-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:6:7-34
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.1.0-rc01] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/e5adcd2844c3d7e102d34efd7e4eeaa4/core-1.1.0-rc01/AndroidManifest.xml:24:18-86
+15        android:debuggable="true"
+16        android:icon="@mipmap/ic_launcher"
+16-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:7:7-41
+17        android:label="@string/app_name"
+17-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:8:7-39
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:10:7-52
+19        android:supportsRtl="true"
+19-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:11:7-33
+20        android:testOnly="true"
+21        android:theme="@style/AppTheme" >
+21-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:12:7-38
+22        <activity
+22-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:13:5-17:16
+23            android:name="com.raywenderlich.android.majesticreader.presentation.MainActivity"
+23-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:14:9-50
+24            android:label="@string/title_activity_main"
+24-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:15:9-52
+25            android:theme="@style/AppTheme.NoActionBar" >
+25-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:16:9-52
+26        </activity>
+27
+28        <!-- Splash Activity -->
+29        <activity android:name="com.raywenderlich.android.majesticreader.presentation.SplashActivity" >
+29-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:20:5-26:16
+29-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:20:15-58
+30            <intent-filter>
+30-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:21:7-25:23
+31                <action android:name="android.intent.action.MAIN" />
+31-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:22:9-60
+31-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:22:17-58
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:24:9-68
+33-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:24:19-66
+34            </intent-filter>
+35        </activity>
+36
+37        <service
+37-->[androidx.room:room-runtime:2.1.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/dbe5abd492e031641f6dbaf63cc40dba/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+38            android:name="androidx.room.MultiInstanceInvalidationService"
+38-->[androidx.room:room-runtime:2.1.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/dbe5abd492e031641f6dbaf63cc40dba/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+39            android:exported="false" />
+39-->[androidx.room:room-runtime:2.1.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/dbe5abd492e031641f6dbaf63cc40dba/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+40
+41        <provider
+41-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+42            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+42-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+43            android:authorities="com.raywenderlich.android.majesticreader.lifecycle-process"
+43-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+44            android:exported="false"
+44-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+45            android:multiprocess="true" />
+45-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+46    </application>
+47
+48</manifest>
