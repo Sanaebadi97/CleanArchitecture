@@ -25,5 +25,6 @@ As you can see in the image, an Android application with Clean Architecture gath
 
 **Presentation**, which includes the UI, Presenter, and ViewModels
 
-Domain, which includes Entities and Interactors
+**Domain**, which includes Entities and Interactors
+
 Data, which includes Databases and Rest clients
