@@ -24,16 +24,16 @@ import kotlin.coroutines.Continuation;
 public final class BookmarkDao_Impl implements BookmarkDao {
   private final RoomDatabase __db;
 
-  private final EntityInsertionAdapter __insertionAdapterOfBookmarkEntity;
+  private final EntityInsertionAdapter<BookmarkEntity> __insertionAdapterOfBookmarkEntity;
 
-  private final EntityDeletionOrUpdateAdapter __deletionAdapterOfBookmarkEntity;
+  private final EntityDeletionOrUpdateAdapter<BookmarkEntity> __deletionAdapterOfBookmarkEntity;
 
   public BookmarkDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfBookmarkEntity = new EntityInsertionAdapter<BookmarkEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `bookmark`(`id`,`documentUri`,`page`) VALUES (nullif(?, 0),?,?)";
+        return "INSERT OR REPLACE INTO `bookmark` (`id`,`documentUri`,`page`) VALUES (nullif(?, 0),?,?)";
       }
 
       @Override
@@ -108,7 +108,7 @@ public final class BookmarkDao_Impl implements BookmarkDao {
     return CoroutinesRoom.execute(__db, false, new Callable<List<BookmarkEntity>>() {
       @Override
       public List<BookmarkEntity> call() throws Exception {
-        final Cursor _cursor = DBUtil.query(__db, _statement, false);
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfDocumentUri = CursorUtil.getColumnIndexOrThrow(_cursor, "documentUri");

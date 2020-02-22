@@ -46,56 +46,59 @@ import com.raywenderlich.android.majesticreader.framework.MajesticViewModelFacto
 import com.raywenderlich.android.majesticreader.presentation.IntentUtil.createOpenIntent
 import com.raywenderlich.android.majesticreader.presentation.MainActivityDelegate
 import kotlinx.android.synthetic.main.fragment_library.*
+import java.lang.ClassCastException
 
 class LibraryFragment : Fragment() {
 
-  companion object {
-    const val READ_REQUEST_CODE = 100
+    companion object {
+        const val READ_REQUEST_CODE = 100
 
-    fun newInstance() = LibraryFragment()
-  }
-
-  private lateinit var viewModel: LibraryViewModel
-
-  private lateinit var mainActivityDelegate: MainActivityDelegate
-
-  override fun onAttach(context: Context?) {
-    super.onAttach(context)
-
-    try {
-      mainActivityDelegate = context as MainActivityDelegate
-    } catch (e: ClassCastException) {
-      throw ClassCastException()
+        fun newInstance() = LibraryFragment()
     }
-  }
 
-  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                            savedInstanceState: Bundle?): View? {
-    return inflater.inflate(R.layout.fragment_library, container, false)
-  }
+    private lateinit var viewModel: LibraryViewModel
 
-  override fun onActivityCreated(savedInstanceState: Bundle?) {
-    super.onActivityCreated(savedInstanceState)
-    val adapter = DocumentsAdapter(glide = Glide.with(this)) {
-      mainActivityDelegate.openDocument(it)
+    private lateinit var mainActivityDelegate: MainActivityDelegate
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        try {
+            mainActivityDelegate = context as MainActivityDelegate
+        } catch (e: ClassCastException) {
+            throw ClassCastException()
+        }
     }
-    documentsRecyclerView.adapter = adapter
 
-    viewModel = ViewModelProviders.of(this, MajesticViewModelFactory)
-        .get(LibraryViewModel::class.java)
-    viewModel.documents.observe(this, Observer { adapter.update(it) })
-    viewModel.loadDocuments()
 
-    fab.setOnClickListener { startActivityForResult(createOpenIntent(), READ_REQUEST_CODE) }
-  }
 
-  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-    // Process open file intent.
-    if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-      data?.data?.also { uri -> viewModel.addDocument(uri) }
-    } else {
-      super.onActivityResult(requestCode, resultCode, data)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_library, container, false)
     }
-  }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        val adapter = DocumentsAdapter(glide = Glide.with(this)) {
+            mainActivityDelegate.openDocument(it)
+        }
+        documentsRecyclerView.adapter = adapter
+
+        viewModel = ViewModelProviders.of(this, MajesticViewModelFactory)
+                .get(LibraryViewModel::class.java)
+        viewModel.documents.observe(this, Observer { adapter.update(it) })
+        viewModel.loadDocuments()
+
+        fab.setOnClickListener { startActivityForResult(createOpenIntent(), READ_REQUEST_CODE) }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        // Process open file intent.
+        if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            data?.data?.also { uri -> viewModel.addDocument(uri) }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
 
 }

@@ -17,7 +17,7 @@
 13        android:allowBackup="false"
 13-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:6:7-34
 14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-14-->[androidx.core:core:1.1.0-rc01] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/e5adcd2844c3d7e102d34efd7e4eeaa4/core-1.1.0-rc01/AndroidManifest.xml:24:18-86
+14-->[androidx.core:core:1.2.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/9f0d48a468ab789e464aaa05c14cf8b4/core-1.2.0/AndroidManifest.xml:24:18-86
 15        android:debuggable="true"
 16        android:icon="@mipmap/ic_launcher"
 16-->/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/src/main/AndroidManifest.xml:7:7-41
@@ -57,22 +57,22 @@
 35        </activity>
 36
 37        <service
-37-->[androidx.room:room-runtime:2.1.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/dbe5abd492e031641f6dbaf63cc40dba/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+37-->[androidx.room:room-runtime:2.2.3] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/9f47d4ebbf3f39d68b1b4f67b4d8441b/room-runtime-2.2.3/AndroidManifest.xml:25:9-27:40
 38            android:name="androidx.room.MultiInstanceInvalidationService"
-38-->[androidx.room:room-runtime:2.1.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/dbe5abd492e031641f6dbaf63cc40dba/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+38-->[androidx.room:room-runtime:2.2.3] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/9f47d4ebbf3f39d68b1b4f67b4d8441b/room-runtime-2.2.3/AndroidManifest.xml:26:13-74
 39            android:exported="false" />
-39-->[androidx.room:room-runtime:2.1.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/dbe5abd492e031641f6dbaf63cc40dba/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+39-->[androidx.room:room-runtime:2.2.3] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/9f47d4ebbf3f39d68b1b4f67b4d8441b/room-runtime-2.2.3/AndroidManifest.xml:27:13-37
 40
 41        <provider
-41-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/bd3559d00680f7b586d8c0d79ea25dd0/lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 42            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-42-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/bd3559d00680f7b586d8c0d79ea25dd0/lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
 43            android:authorities="com.raywenderlich.android.majesticreader.lifecycle-process"
-43-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+43-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/bd3559d00680f7b586d8c0d79ea25dd0/lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
 44            android:exported="false"
-44-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+44-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/bd3559d00680f7b586d8c0d79ea25dd0/lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
 45            android:multiprocess="true" />
-45-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/2bbea647c4b3e980f9961e868c665dee/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+45-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanaebadi/.gradle/caches/transforms-2/files-2.1/bd3559d00680f7b586d8c0d79ea25dd0/lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
 46    </application>
 47
 48</manifest>

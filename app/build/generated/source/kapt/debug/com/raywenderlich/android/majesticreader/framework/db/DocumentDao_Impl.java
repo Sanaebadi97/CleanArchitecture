@@ -24,16 +24,16 @@ import kotlin.coroutines.Continuation;
 public final class DocumentDao_Impl implements DocumentDao {
   private final RoomDatabase __db;
 
-  private final EntityInsertionAdapter __insertionAdapterOfDocumentEntity;
+  private final EntityInsertionAdapter<DocumentEntity> __insertionAdapterOfDocumentEntity;
 
-  private final EntityDeletionOrUpdateAdapter __deletionAdapterOfDocumentEntity;
+  private final EntityDeletionOrUpdateAdapter<DocumentEntity> __deletionAdapterOfDocumentEntity;
 
   public DocumentDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfDocumentEntity = new EntityInsertionAdapter<DocumentEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `document`(`uri`,`title`,`size`,`thumbnail_uri`) VALUES (?,?,?,?)";
+        return "INSERT OR REPLACE INTO `document` (`uri`,`title`,`size`,`thumbnail_uri`) VALUES (?,?,?,?)";
       }
 
       @Override
@@ -114,7 +114,7 @@ public final class DocumentDao_Impl implements DocumentDao {
     return CoroutinesRoom.execute(__db, false, new Callable<List<DocumentEntity>>() {
       @Override
       public List<DocumentEntity> call() throws Exception {
-        final Cursor _cursor = DBUtil.query(__db, _statement, false);
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfUri = CursorUtil.getColumnIndexOrThrow(_cursor, "uri");
           final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");

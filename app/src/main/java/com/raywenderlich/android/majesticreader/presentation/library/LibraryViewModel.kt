@@ -48,18 +48,18 @@ class LibraryViewModel(application: Application, interactors: Interactors)
 
     fun loadDocuments() {
         GlobalScope.launch {
-            documents.postValue(interactors.getDocuments)
+            documents.postValue(interactors.getDocuments())
         }
     }
 
     fun addDocument(uri: Uri) {
-
         GlobalScope.launch {
             withContext(Dispatchers.IO) {
-                interactors.addDocument(Document(url = uri.toString(), name = "", size = 0, thumbnail = ""))
+                interactors.addDocument(Document(uri.toString(), "", 0, ""))
             }
+
+            loadDocuments()
         }
-        loadDocuments()
     }
 
     fun setOpenDocument(document: Document) {

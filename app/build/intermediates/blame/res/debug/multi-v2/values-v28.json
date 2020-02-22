@@ -4,7 +4,7 @@
             "outputFile": "/home/sanaebadi/Pasport/programming/and_dev/workspace/TestPro/clean-architecture-android-materials/starter/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/home/sanaebadi/.gradle/caches/transforms-2/files-2.1/0c2b479aea85fb46bb2fd42406c56021/appcompat-1.0.2/res/values-v28/values-v28.xml",
+                    "source": "/home/sanaebadi/.gradle/caches/transforms-2/files-2.1/8b6fdd66e2e7836ee5484cc81d1e4acf/appcompat-1.1.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
@@ -12,6 +12,24 @@
                         "endLines": "2,3,7,11",
                         "endColumns": "74,86,12,12",
                         "endOffsets": "125,212,442,684"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,16",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "755,830,917,1147",
+                        "endLines": "10,11,15,19",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "825,912,1142,1384"
+                    }
+                },
+                {
+                    "source": "/home/sanaebadi/.gradle/caches/transforms-2/files-2.1/9295bbfd75ed6320889c64bba8da029e/material-1.1.0/res/values-v28/values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,143,231,319,407,494,581,668",
+                        "endColumns": "87,87,87,87,86,86,86,86",
+                        "endOffsets": "138,226,314,402,489,576,663,750"
                     }
                 }
             ]

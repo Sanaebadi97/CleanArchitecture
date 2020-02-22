@@ -4,6 +4,7 @@ import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomOpenHelper;
 import androidx.room.RoomOpenHelper.Delegate;
+import androidx.room.RoomOpenHelper.ValidationResult;
 import androidx.room.util.DBUtil;
 import androidx.room.util.TableInfo;
 import androidx.room.util.TableInfo.Column;
@@ -13,7 +14,6 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
-import java.lang.IllegalStateException;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -42,6 +42,11 @@ public final class MajesticReaderDatabase_Impl extends MajesticReaderDatabase {
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `bookmark`");
         _db.execSQL("DROP TABLE IF EXISTS `document`");
+        if (mCallbacks != null) {
+          for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
+            mCallbacks.get(_i).onDestructiveMigration(_db);
+          }
+        }
       }
 
       @Override
@@ -74,34 +79,35 @@ public final class MajesticReaderDatabase_Impl extends MajesticReaderDatabase {
       }
 
       @Override
-      protected void validateMigration(SupportSQLiteDatabase _db) {
+      protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsBookmark = new HashMap<String, TableInfo.Column>(3);
-        _columnsBookmark.put("id", new TableInfo.Column("id", "INTEGER", true, 1));
-        _columnsBookmark.put("documentUri", new TableInfo.Column("documentUri", "TEXT", true, 0));
-        _columnsBookmark.put("page", new TableInfo.Column("page", "INTEGER", true, 0));
+        _columnsBookmark.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsBookmark.put("documentUri", new TableInfo.Column("documentUri", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsBookmark.put("page", new TableInfo.Column("page", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysBookmark = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesBookmark = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoBookmark = new TableInfo("bookmark", _columnsBookmark, _foreignKeysBookmark, _indicesBookmark);
         final TableInfo _existingBookmark = TableInfo.read(_db, "bookmark");
         if (! _infoBookmark.equals(_existingBookmark)) {
-          throw new IllegalStateException("Migration didn't properly handle bookmark(com.raywenderlich.android.majesticreader.framework.db.BookmarkEntity).\n"
+          return new RoomOpenHelper.ValidationResult(false, "bookmark(com.raywenderlich.android.majesticreader.framework.db.BookmarkEntity).\n"
                   + " Expected:\n" + _infoBookmark + "\n"
                   + " Found:\n" + _existingBookmark);
         }
         final HashMap<String, TableInfo.Column> _columnsDocument = new HashMap<String, TableInfo.Column>(4);
-        _columnsDocument.put("uri", new TableInfo.Column("uri", "TEXT", true, 1));
-        _columnsDocument.put("title", new TableInfo.Column("title", "TEXT", true, 0));
-        _columnsDocument.put("size", new TableInfo.Column("size", "INTEGER", true, 0));
-        _columnsDocument.put("thumbnail_uri", new TableInfo.Column("thumbnail_uri", "TEXT", true, 0));
+        _columnsDocument.put("uri", new TableInfo.Column("uri", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsDocument.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsDocument.put("size", new TableInfo.Column("size", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsDocument.put("thumbnail_uri", new TableInfo.Column("thumbnail_uri", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysDocument = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesDocument = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoDocument = new TableInfo("document", _columnsDocument, _foreignKeysDocument, _indicesDocument);
         final TableInfo _existingDocument = TableInfo.read(_db, "document");
         if (! _infoDocument.equals(_existingDocument)) {
-          throw new IllegalStateException("Migration didn't properly handle document(com.raywenderlich.android.majesticreader.framework.db.DocumentEntity).\n"
+          return new RoomOpenHelper.ValidationResult(false, "document(com.raywenderlich.android.majesticreader.framework.db.DocumentEntity).\n"
                   + " Expected:\n" + _infoDocument + "\n"
                   + " Found:\n" + _existingDocument);
         }
+        return new RoomOpenHelper.ValidationResult(true, null);
       }
     }, "e0ab3e09c675b1c7778cbd9f039a82d6", "96508f5b6f1f4d2e8a84cbe6688a4db4");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
