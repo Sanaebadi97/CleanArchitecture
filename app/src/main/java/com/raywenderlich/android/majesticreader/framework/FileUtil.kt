@@ -40,11 +40,15 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
+
 object FileUtil {
+
+
 
   data class DocumentDetail(val name: String, val size: Int, val thumbnail: String)
 
-  private fun getPdfThumbnailUri(context: Context, documentUri: String, documentName: String):
+
+  public fun getPdfThumbnailUri(context: Context, documentUri: String, documentName: String):
       String {
     val pdfRenderer = PdfRenderer(context.contentResolver.openFileDescriptor(Uri.parse(documentUri),
         "r"))
@@ -74,7 +78,8 @@ object FileUtil {
     return thumbnailFile.absolutePath
   }
 
-  fun getDocumentDetails(context: Context, documentUri: String): DocumentDetail {
+
+  public fun getDocumentDetails(context: Context, documentUri: String): DocumentDetail {
     val projection = arrayOf(MediaStore.MediaColumns.DISPLAY_NAME, MediaStore.MediaColumns.SIZE)
 
     context.contentResolver.query(Uri.parse(documentUri), projection, null, null, null)?.use {
