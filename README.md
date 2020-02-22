@@ -53,6 +53,6 @@ Along with the Clean Architecture approach, the following Android architecture c
 
 **Paging Library** ‒ Makes it easier for you to load data gradually and gracefully within your app’s RecyclerView
 
-
+==
 [Resource](https://rubygarage.org/blog/clean-android-architecture)
 
