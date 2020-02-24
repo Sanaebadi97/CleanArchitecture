@@ -1,4 +1,4 @@
-# CleanArchitecture :heart_eyes:
+# CleanArchitecture :heart_eyes: :v:
 
 Here’s a brief definition of some terms from the images above to help you get more familiar with this approach::relaxed:
 
