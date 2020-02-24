@@ -1,4 +1,4 @@
-# CleanArchitecture
+# CleanArchitecture :heart_eyes:
 
 Here’s a brief definition of some terms from the images above to help you get more familiar with this approach:
 
