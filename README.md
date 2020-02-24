@@ -31,7 +31,7 @@ As you can see in the image, an Android application with Clean Architecture gath
 
 ----
 
-***Here’s a short list of technologies used in this example:***
+***Here’s a short list of technologies used in this example:*** :sunglasses:
 
 **Kotlin** ‒ A statically typed programming language for modern multi-platform applications; Google rates Kotlin a first-class language for writing Android apps
 
