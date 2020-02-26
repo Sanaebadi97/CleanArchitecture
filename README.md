@@ -57,3 +57,5 @@ Along with the Clean Architecture approach, the following Android architecture c
 
 [Resource](https://rubygarage.org/blog/clean-android-architecture)
 
+[Resource1](https://caster.io/lessons/android-clean-architecture-android-and-clean-architecture)
+
