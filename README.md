@@ -60,5 +60,5 @@ Along with the Clean Architecture approach, the following Android architecture c
 [Resource1](https://caster.io/lessons/android-clean-architecture-android-and-clean-architecture) :muscle:
 
 
-[Resource2](https://www.youtube.com/watch?v=G_UFfOO8E5s)
+[Resource2](https://www.youtube.com/watch?v=G_UFfOO8E5s) :facepunch:	
 
