@@ -1,6 +1,6 @@
 # CleanArchitecture :heart_eyes: :v:
 
-Here’s a brief definition of some terms from the images above to help you get more familiar with this approach::relaxed:
+Here’s a brief definition of some terms from the images above to help you get more familiar with this approach:relaxed:
 
 **Entities** are enterprise-wide business rules that encapsulate the most general business rules and also contain Data Transfer Objects (DTOs). When something external changes, these rules are the least likely to change.
 
